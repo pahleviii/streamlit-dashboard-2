@@ -1,47 +1,53 @@
-# Streamlit Dashboard untuk Analisis Penyewaan Sepeda
+Deskripsi
 
-## 📌 Deskripsi
-Dashboard ini dibuat menggunakan **Streamlit** untuk menganalisis data penyewaan sepeda berdasarkan dataset harian (*day_df*) dan per jam (*hour_df*). Dashboard ini menyajikan berbagai visualisasi interaktif dan fitur eksplorasi data.
+Dashboard ini dibuat menggunakan Streamlit untuk menganalisis faktor-faktor yang mempengaruhi jumlah penyewaan sepeda. Dengan menggunakan dataset day_df dan hour_df, dashboard ini menjawab dua pertanyaan utama:
 
-## 📂 Fitur
-✅ **Pilih Dataset**: Pengguna dapat memilih antara dataset harian atau per jam.
-✅ **Statistik Ringkasan**: Menampilkan statistik deskriptif dari dataset yang dipilih.
-✅ **Heatmap Korelasi**: Menampilkan hubungan antar variabel menggunakan **seaborn heatmap**.
-✅ **Scatter Plot Interaktif**: Menunjukkan hubungan antara suhu dan jumlah penyewaan sepeda dengan **Plotly**.
-✅ **Unduh Data**: Dataset yang dipilih dapat diunduh dalam format CSV.
-✅ **Unduh Visualisasi**: Heatmap dapat disimpan dalam bentuk gambar PNG.
+Bagaimana pengaruh kondisi cuaca terhadap jumlah penyewaan sepeda per hari?
 
-## 📥 Instalasi
-1. **Clone repository (jika ada)**
-   ```bash
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
-   ```
-2. **Buat virtual environment (opsional)**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Untuk Mac/Linux
-   venv\Scripts\activate  # Untuk Windows
-   ```
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+Faktor apa yang paling berpengaruh terhadap jumlah penyewaan sepeda?
 
-## 🚀 Menjalankan Aplikasi
-Jalankan perintah berikut untuk memulai dashboard:
-```bash
-streamlit run app.py
-```
+Fitur Utama
 
-## 📊 Struktur Kode
-- `Dashboard.py`: Script utama yang menjalankan dashboard.
-- `Cleaned_day.csv` & `Cleaned_hour.csv`: Dataset yang digunakan.
-- `requirements.txt`: File dependencies yang dibutuhkan.
+Visualisasi Data: Menampilkan dua grafik utama yang mendukung analisis kedua pertanyaan.
 
-## 🛠️ Teknologi yang Digunakan
-- **Python** (Pandas, Matplotlib, Seaborn, Streamlit, Plotly)
-- **Streamlit**: Untuk membangun UI interaktif.
-- **Seaborn & Matplotlib**: Untuk visualisasi data statis.
+Fitur Interaktif: Pengguna dapat memilih dataset (harian atau per jam) serta menyaring data berdasarkan musim.
 
+Statistik Ringkasan: Menyediakan ringkasan statistik dari dataset yang dipilih.
 
+Download Data & Visualisasi: Pengguna dapat mengunduh dataset dan gambar hasil visualisasi.
+
+Teknologi yang Digunakan
+
+Python
+
+Streamlit untuk dashboard interaktif
+
+Matplotlib & Seaborn untuk visualisasi data
+
+Pandas untuk manipulasi data
+
+Cara Menjalankan
+
+Pastikan telah menginstal dependensi yang diperlukan:
+
+pip install streamlit pandas matplotlib seaborn
+
+Jalankan aplikasi Streamlit:
+
+streamlit run dashboard.py
+
+Buka browser dan akses http://localhost:8501 untuk melihat dashboard.
+
+Struktur File
+
+.
+├── dashboard.py  # Kode utama Streamlit
+├── day_df.csv     # Dataset harian
+├── hour_df.csv    # Dataset per jam
+├── README.md      # Dokumentasi ini
+
+Penjelasan Analisis
+
+Pengaruh Cuaca: Visualisasi heatmap korelasi menunjukkan bahwa suhu dan kelembaban memiliki pengaruh signifikan terhadap jumlah penyewaan sepeda.
+
+Faktor Paling Berpengaruh: Scatter plot menunjukkan hubungan antara temperatur dan jumlah penyewaan, dengan tren yang menunjukkan peningkatan seiring dengan kenaikan suhu.
